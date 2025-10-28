@@ -4,26 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG Amigo Felino</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
-    <h1>ONG Amigo Felino</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="titulo">
+      <h1>ONG Amigo Felino</h1>
+
+      <!-- Menu hambúrguer para mobile -->
+      <div class="menu-hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li>
+            <a href="projetos.html">Projetos</a>
+            <ul></ul> <!-- submenu vazio para atender requisito -->
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
+    <!-- Seções originais do seu site -->
+    <section class="secao">
       <h2>Quem Somos</h2>
       <p>Somos uma organização sem fins lucrativos dedicada ao resgate, castração e adoção de gatos em situação de rua. Nosso objetivo é oferecer uma vida digna e cheia de amor a cada felino que encontramos.</p>
-      <img src="imagens ONG/gato-resgate1.jpg.jpg" alt="Voluntário resgatando filhotes feridos e abandonados" width="500">
+      <img src="imagens ONG/gatoresgate.jpg" alt="Voluntário resgatando filhotes feridos e abandonados" width="500">
     </section>
 
     <section>
@@ -34,7 +48,7 @@
 
     <section>
       <h2>Histórias de Adoção</h2>
-      <p>Cada gato adotado é uma vitória. Conheça algumas das nossas histórias felizes!</p>
+      <p>Cada gato adotado é uma vitória. Faça parte dessa história de amor!</p>
       <img src="imagens ONG/adocao1.jpg.jpg" alt="Adoção feliz e emocionante de um gato" width="500">
     </section>
 
@@ -46,6 +60,7 @@
         <p>✉️ contato@amigofelino.org.br</p>
       </address>
     </section>
+
   </main>
 
   <footer>
