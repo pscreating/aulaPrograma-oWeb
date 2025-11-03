@@ -4,7 +4,9 @@ Entrega 3 – JavaScript Avançado • Desenvolvimento Web
 Esta aplicação transforma um site estático em uma SPA (Single Page Application) totalmente dinâmica, utilizando manipulação do DOM, templates JavaScript, 
 sistema de navegação dinâmica e armazenamento local.
 
+
 🚀 Tecnologias Utilizadas:
+
 
 .HTML5
 
@@ -20,7 +22,10 @@ sistema de navegação dinâmica e armazenamento local.
 
 .Eventos, validação e animações
 
+
 ✅ Funcionalidades Implementadas
+
+
 ✔ SPA — Single Page Application
 
 .Navegação entre páginas sem recarregar
@@ -28,6 +33,7 @@ sistema de navegação dinâmica e armazenamento local.
 .Conteúdo carregado via templates JS.
 
 .Transições animadas ao trocar de página.
+
 
 ✔ Manipulação do DOM
 
@@ -37,11 +43,13 @@ sistema de navegação dinâmica e armazenamento local.
 
 .Toasts criados e animados em tempo real.
 
+
 ✔ Menu Hambúrguer Responsivo
 
 .Interatividade completa via JavaScript.
 
 .Abre e fecha em telas pequenas.
+
 
 ✔ Validação de Formulário
 
@@ -51,6 +59,7 @@ sistema de navegação dinâmica e armazenamento local.
 
 .Bloqueio do envio até o formulário estar correto.
 
+
 ✔ Sistema de Toasts (feedback ao usuário)
 
 .Mensagens de sucesso ✅ ou erro ❗
@@ -58,6 +67,7 @@ sistema de navegação dinâmica e armazenamento local.
 .Aparecem abaixo do botão Enviar Cadastro.
 
 .Criados dinamicamente no DOM com animação.
+
 
 ✔ LocalStorage
 
@@ -79,7 +89,9 @@ sistema de navegação dinâmica e armazenamento local.
 └── 📁 imagens ONG/
     └── (todas as imagens utilizadas no site)
 
-📌 Como executar o projeto
+
+
+📌 Como executar o projeto:
 
 1- Baixe ou clone o repositório:
 
@@ -92,7 +104,7 @@ git clone https://github.com/seuusuario/seurepositorio
 ✅ Funciona direto no navegador
 ✅ Compatível com qualquer sistema operacional
 
-📖 Objetivo Acadêmico
+📖 Objetivo Acadêmico:
 
 .Este projeto atende todos os requisitos obrigatórios da entrega:
 
