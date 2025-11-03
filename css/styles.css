@@ -110,7 +110,7 @@ header nav ul {
   list-style: none;                  /* Remove bullets */
   display: flex;                     /* Links em linha */
   justify-content: center;            /* Centraliza horizontal */
-  gap: var(--space-3);               /* Espaçamento entre links */
+  gap: 50px;          /* Espaçamento entre links */
   padding: 0;
   margin: var(--space-2) 0 0;
 }
@@ -121,7 +121,7 @@ header nav a {
   font-weight: 700;                  /* Negrito */
   font-size: var(--font-size-lg);    /* Tamanho da fonte */
   text-transform: uppercase;         /* Letras maiúsculas */
-  padding: var(--space-sm) var(--space-md); /* Padding interno */
+   padding: var(--space-sm) 10px; /* padding vertical x horizontal */
   border-radius: var(--radius);      /* Bordas arredondadas */
   text-shadow: 0 0 8px var(--color-secondary),
                0 0 15px var(--color-tertiary); /* Sombra do texto */
@@ -233,6 +233,20 @@ button:hover, .btn:hover {
 
 button:active, .btn:active {
   transform: scale(0.97);
+}
+header nav a[aria-current="page"] {
+  position: relative;
+}
+
+header nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;        /* distância da linha em relação ao texto */
+  width: 100%;         /* linha ocupa todo o link */
+  height: 3px;         /* espessura da linha */
+  background-color: var(--color-secondary); /* cor da linha */
+  border-radius: 2px;
 }
 
 /* ============================================================
@@ -515,36 +529,109 @@ p {
 }
 
 /* Toasts (mensagens temporárias no canto) */
+/* Toasts dentro do formulário, abaixo do botão */
 .toast-container {
-  position: fixed;
-  top: var(--space-lg);
-  right: var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  z-index: 9999;
+  gap: 10px;          /* espaço entre toasts */
+  margin-top: 10px;   /* distância do botão */
 }
 
 .toast {
-  padding: var(--space-md);
-  border-radius: var(--radius);
-  color: var(--color-white);
-  font-weight: bold;
-  min-width: 200px;
-  max-width: 300px;
-  box-shadow: var(--shadow);
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: var(--color-success);
+  color: white;
   opacity: 0;
-  transform: translateX(20px);
-  transition: all 0.4s ease;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Tipos de toast */
 .toast-success { background-color: var(--color-success); }
+.toast-error   { background-color: var(--color-accent); }
 .toast-info    { background-color: var(--color-info); }
 .toast-warning { background-color: var(--color-secondary); }
-.toast-error   { background-color: var(--color-accent); }
 
-/* Mostrar toast */
-.toast.show {
-  transform: translateX(0);
+/* ================= MENU COM LINHA ANIMADA AJUSTADA ================= */
+nav {
+  position: relative; /* necessário para posicionar a linha animada */
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3); /* mantém seu espaçamento */
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black; /* mantém a cor original */
+  padding: 5px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Linha animada */
+nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: var(--color-secondary); /* mesma cor do seu menu */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hover: linha acompanha o link */
+nav ul li a:hover ~ nav::after {
+ 
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 100px; /* mantém seu espaçamento */
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Linha animada: posicionada fora do fluxo */
+.nav-underline {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  pointer-events: none; /* evita clicar na linha */
 }

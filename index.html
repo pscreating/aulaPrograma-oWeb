@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  
+     <!-- Container para mensagens de toast -->
+  <div class="toast-container"></div>
+
   <header>
     <div class="titulo">
       <h1>ONG Amigo Felino</h1>
@@ -21,12 +25,10 @@
 
       <nav>
         <ul>
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li>
-            <a href="projetos.html">Projetos</a>
-            <ul></ul> <!-- submenu vazio para atender requisito -->
-          </li>
-          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="#" data-page="index">Início</a></li>
+          <li><a href="#" data-page="projetos">Projetos</a></li>
+          <li><a href="#" data-page="cadastro">Cadastro</a></li>
+
         </ul>
       </nav>
     </div>
@@ -43,13 +45,13 @@
     <section>
       <h2>Nossa Missão</h2>
       <p>Promover o bem-estar animal através do acolhimento, tratamento e encaminhamento de gatos abandonados para lares seguros e amorosos.</p>
-      <img src="imagens ONG/gato-cuidado2.jpg.jpg" alt="Gato recebendo cuidados veterinários" width="500">
+      <img src="imagens ONG/gato-cuidado.jpg" alt="Gato recebendo cuidados veterinários" width="500">
     </section>
 
     <section>
       <h2>Histórias de Adoção</h2>
       <p>Cada gato adotado é uma vitória. Faça parte dessa história de amor!</p>
-      <img src="imagens ONG/adocao1.jpg.jpg" alt="Adoção feliz e emocionante de um gato" width="500">
+      <img src="imagens ONG/adocao.jpg" alt="Adoção feliz e emocionante de um gato" width="500">
     </section>
 
     <section>
@@ -69,4 +71,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
