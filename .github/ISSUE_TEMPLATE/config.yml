@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Suporte geral
+    url: https://github.com/pscreating/aulaPrograma-oWeb
+    about: Use os templates abaixo para criar issues.
