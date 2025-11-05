@@ -1,8 +1,7 @@
 /* ============================================================
    script.js - ONG AMIGO FELINO
    SPA, menu, formulário e toast
-   VERSÃO ORGANIZADA, SEM DUPLICAÇÕES
-============================================================ */
+  ======================================== */
 
 /* -------------------- TOAST SYSTEM -------------------- */
 function showToast(msg, type = "success", container) {
@@ -34,8 +33,12 @@ const nav = document.querySelector("nav");
 
 if (menuHamburguer) {
   menuHamburguer.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
+  const expanded = menuHamburguer.getAttribute("aria-expanded") === "true";
+  menuHamburguer.setAttribute("aria-expanded", !expanded);
+  menuHamburguer.setAttribute("aria-label", expanded ? "Abrir menu" : "Fechar menu");
+
+  nav.classList.toggle("active");
+});
 }
 
 /* -------------------- SPA: CONTEÚDOS DAS PÁGINAS -------------------- */

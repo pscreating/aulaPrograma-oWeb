@@ -12,18 +12,18 @@
      <!-- Container para mensagens de toast -->
   <div class="toast-container"></div>
 
-  <header>
+  <header role="banner">    
     <div class="titulo">
       <h1>ONG Amigo Felino</h1>
 
       <!-- Menu hambúrguer para mobile -->
-      <div class="menu-hamburguer">
+      <button class="menu-hamburguer" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
-      <nav>
+      <nav role="navigation" aria-label="Menu principal">
         <ul>
           <li><a href="#" data-page="index">Início</a></li>
           <li><a href="#" data-page="projetos">Projetos</a></li>
@@ -34,9 +34,8 @@
     </div>
   </header>
 
-  <main>
-    <!-- Seções originais do seu site -->
-    <section class="secao">
+  <main role="main">
+        <section class="secao">      
       <h2>Quem Somos</h2>
       <p>Somos uma organização sem fins lucrativos dedicada ao resgate, castração e adoção de gatos em situação de rua. Nosso objetivo é oferecer uma vida digna e cheia de amor a cada felino que encontramos.</p>
       <img src="imagens ONG/gatoresgate.jpg" alt="Voluntário resgatando filhotes feridos e abandonados" width="500">
@@ -65,7 +64,7 @@
 
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; <span id="ano"></span> ONG Amigo Felino</p>
   </footer>
 
