@@ -597,3 +597,54 @@ nav::after {
   transition: all 0.3s ease;
 }
 
+/* ============================================================
+   MODO ESCURO — sem alterar layout original
+============================================================ */
+.dark-mode body {
+  filter: brightness(0.75); /* escurece levemente sem trocar cores */
+}
+
+.dark-mode main,
+.dark-mode section,
+.dark-mode .secao,
+.dark-mode aside,
+.dark-mode form {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: var(--color-primary) !important;
+}
+
+.dark-mode p,
+.dark-mode label,
+.dark-mode a,
+.dark-mode li {
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   ALTO CONTRASTE — versão suave
+============================================================ */
+.high-contrast body {
+  filter: contrast(1.35) brightness(1.1);
+}
+
+.high-contrast main,
+.high-contrast section,
+.high-contrast form,
+.high-contrast aside {
+  border-color: #ffffff !important;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast p,
+.high-contrast label,
+.high-contrast a,
+.high-contrast li {
+  text-shadow: none !important;
+}

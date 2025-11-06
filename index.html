@@ -8,12 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+   <a href="#maincontent" class="skip-link">Pular para o conteúdo principal</a>
   
      <!-- Container para mensagens de toast -->
-  <div class="toast-container"></div>
+    <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
   <header role="banner">    
-    <div class="titulo">
+    <div class="acessibilidade-controles">
+  <button id="btn-dark" aria-pressed="false">Modo Escuro</button>
+  <button id="btn-contrast" aria-pressed="false">Alto Contraste</button>
+</div>
+
       <h1>ONG Amigo Felino</h1>
 
       <!-- Menu hambúrguer para mobile -->
@@ -34,7 +40,8 @@
     </div>
   </header>
 
-  <main role="main">
+  <main id="maincontent" role="main">
+
         <section class="secao">      
       <h2>Quem Somos</h2>
       <p>Somos uma organização sem fins lucrativos dedicada ao resgate, castração e adoção de gatos em situação de rua. Nosso objetivo é oferecer uma vida digna e cheia de amor a cada felino que encontramos.</p>
@@ -60,6 +67,8 @@
         <p>📞 (11) 99876-5432</p>
         <p>✉️ contato@amigofelino.org.br</p>
       </address>
+
+
     </section>
 
   </main>
