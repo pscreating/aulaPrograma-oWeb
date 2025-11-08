@@ -1,126 +1,204 @@
-🐱 ONG Amigo Felino 
-Entrega 3 – JavaScript Avançado • Desenvolvimento Web
+# 🐱 ONG Amigo Felino  
+### Entrega Final – Experiência Prática IV • Desenvolvimento Web
 
-Esta aplicação transforma um site estático em uma SPA (Single Page Application) totalmente dinâmica, utilizando manipulação do DOM, templates JavaScript, 
-sistema de navegação dinâmica e armazenamento local.
+Este projeto consiste na criação de um site acessível, responsivo e otimizado, seguindo as diretrizes da WCAG 2.1 (Nível AA), 
+utilizando boas práticas de GitFlow, versionamento semântico, documentação técnica e deploy.
 
+A aplicação traz uma SPA (Single Page Application) totalmente funcional, com navegação dinâmica, formulário validado, componentes interativos e 
+modos de acessibilidade para usuários com diferentes necessidades visuais.
 
-🚀 Tecnologias Utilizadas:
+---
 
+# ✅ Funcionalidades Principais
 
-.HTML5
+## 🧩 **SPA — Single Page Application**
+- Navegação dinâmica entre páginas sem recarregar.
+- Conteúdo carregado via templates JavaScript.
+- Transições suaves aplicadas dinamicamente.
+- Estrutura totalmente modular.
 
-.CSS3
+## 🖥️ **Menu Hambúrguer Acessível**
+- Funciona com clique, Enter e Espaço.
+- `aria-expanded` e `aria-label` atualizados dinamicamente.
+- Navegação por teclado totalmente funcional.
 
-.JavaScript (ES6+)
+## ✅ **Formulário com Validação Completa**
+- Validação nativa com `form.checkValidity()`.
+- Campos com feedback visual (válido/inválido).
+- Toasts acessíveis para sucesso e erro.
+- Salvamento automático via `localStorage`.
 
-.LocalStorage
+## 🔔 **Sistema de Toasts Acessíveis**
+- `aria-live="polite"` para suporte a leitores de tela.
+- Toasts animados, temporários e não intrusivos.
 
-.Manipulação avançada do DOM
+---
 
-.Sistema SPA
+# ♿ **Acessibilidade – WCAG 2.1 (Nível AA)**
 
-.Eventos, validação e animações
+Esta entrega implementa todos os requisitos solicitados:
 
+### ✅ **1. Navegação por teclado**
+- Todos os links, botões, inputs e menus acessíveis com TAB.
+- Menu hambúrguer funciona com TAB, Enter e Espaço.
 
-✅ Funcionalidades Implementadas
+### ✅ **2. Estrutura Semântica Correta**
+- Uso adequado de:  
+  `<header>`, `<main>`, `<footer>`, `<section>`, `<address>`, `<nav>`
+- Uso de `role="banner"`, `role="main"`, `role="contentinfo"`.
 
+### ✅ **3. Skip Link**
+- Link “Pular para conteúdo principal” funcional.
 
-✔ SPA — Single Page Application
+### ✅ **4. Labels em todos os Inputs**
+- `<label for="">` associado corretamente a cada campo.
 
-.Navegação entre páginas sem recarregar
+### ✅ **5. Suporte para Leitores de Tela**
+- `aria-label`
+- `aria-expanded`
+- `aria-pressed`
+- `aria-live="polite"`
 
-.Conteúdo carregado via templates JS.
+### ✅ **6. Modos de Acessibilidade**
+- ✅ Modo Escuro  
+- ✅ Alto Contraste  
+- Salvos no `localStorage`.  
+- Adaptam texto, fundo, sombras e bordas.
 
-.Transições animadas ao trocar de página.
+### ✅ **7. Contraste**
+- Verificado para manter legibilidade mínima de 4.5:1.
+- Ajustes com filtros (`brightness`, `contrast`) para acessibilidade leve.
 
+---
 
-✔ Manipulação do DOM
+# 🚀 **Otimização para Produção**
 
-.Renderização dinâmica do conteúdo principal.
+### ✅ Minificação dos Arquivos
+- CSS e JS prontos para minificação (processo sugerido via Minify, CleanCSS etc.).
+- Arquivos organizados para fácil geração das versões `.min`.
 
-.Inserção automática do conteúdo HTML das páginas internas.
+### ✅ Compressão de Imagens
+- Imagens tratadas para redução de tamanho (TinyPNG/Squoosh recomendado).
+- Estrutura pronta para substituição das versões otimizadas.
 
-.Toasts criados e animados em tempo real.
+### ✅ Performance Geral
+- Código modular.
+- HTML limpo.
+- SPA reduz requisições desnecessárias.
 
+---
 
-✔ Menu Hambúrguer Responsivo
+# 🔧 **Tecnologias Utilizadas**
+- **HTML5** (semântico)
+- **CSS3** (Grid, Flexbox, animações)
+- **JavaScript ES6+**
+- **LocalStorage**
+- **WCAG 2.1**
+- **GitFlow**
+- **GitHub Pages** (deploy)
 
-.Interatividade completa via JavaScript.
+---
 
-.Abre e fecha em telas pequenas.
+# 🗂️ Estrutura do Projeto:
 
-
-✔ Validação de Formulário
-
-.Utilização de form.checkValidity().
-
-.Campos com feedback visual (bordas verde/vermelho).
-
-.Bloqueio do envio até o formulário estar correto.
-
-
-✔ Sistema de Toasts (feedback ao usuário)
-
-.Mensagens de sucesso ✅ ou erro ❗
-
-.Aparecem abaixo do botão Enviar Cadastro.
-
-.Criados dinamicamente no DOM com animação.
-
-
-✔ LocalStorage
-
-.Cada envio de formulário gera um registro salvo no navegador.
-
-.Dados persistem mesmo após fechar o site.
-
-🗂 Estrutura de Pastas
-📁 projeto/
-│
-├── index.html
+📁 raiz do projeto/
+│── index.html
+│── README.md
 │
 ├── 📁 css/
-│   └── styles.css
+│ └── styles.css
 │
 ├── 📁 js/
-│   └── script.js
+│ └── script.js
 │
 └── 📁 imagens ONG/
-    └── (todas as imagens utilizadas no site)
+└── (todas as imagens utilizadas)
 
 
+---
 
-📌 Como executar o projeto:
+# 🧪 Como Executar o Projeto
 
-1- Baixe ou clone o repositório:
+### ✅ **Não precisa instalar nada. Funciona direto no navegador.**
 
-git clone https://github.com/seuusuario/seurepositorio
+### 1️⃣ Clonar o repositório:
+```bash
+git clone https://github.com/pscreating/aulaPrograma-oWeb
+2️⃣ Abrir:
+index.html
 
+✅ Compatível com:
 
-2- Abra o arquivo index.html em qualquer navegador.
+Windows
 
-✅ Não precisa de servidor
-✅ Funciona direto no navegador
-✅ Compatível com qualquer sistema operacional
+Linux
 
-📖 Objetivo Acadêmico:
+macOS
 
-.Este projeto atende todos os requisitos obrigatórios da entrega:
+Navegadores modernos (Chrome, Firefox, Edge)
 
+🛠️ Fluxo de Desenvolvimento — GitFlow
+
+Este projeto segue o modelo GitFlow:
+
+✅ Branches utilizadas:
+
+main → versão de produção
+
+develop → versão de desenvolvimento
+
+feature/a11y-basica → implementação da acessibilidade
+
+✅ Pull Request Criado:
+
+Feature → Develop → Main
+
+✅ Commits semânticos:
+
+Exemplos:
+
+feat: implementa acessibilidade da Atividade 4
+
+fix: corrige contraste do menu
+
+chore: adiciona templates de Issues
+
+🏷️ Versionamento Semântico
+
+Release atual: v1.0.0
+Publicada no GitHub Releases.
+
+🌐 Deploy (GitHub Pages)
+
+O projeto está publicado automaticamente via GitHub Pages.
+
+🧑‍🎓 Objetivo Acadêmico
+
+Este projeto cumpre todos os requisitos da Entrega 4:
+
+✅ GitFlow completo
+✅ Commits semânticos
+✅ Pull Request documentado
+✅ Release v1.0.0
+✅ Acessibilidade WCAG 2.1 AA
+✅ Navegação por teclado
+✅ Estrutura semântica
+✅ ARIA
+✅ Skip Link
+✅ Modo Escuro
+✅ Modo Alto Contraste
 ✅ SPA funcional
-✅ Manipulação do DOM
-✅ Templates JavaScript
-✅ Validação avançada
-✅ Toasts de feedback
-✅ Uso de LocalStorage
-✅ Código organizado e modular
-✅ Pastas estruturadas
+✅ Formulário com validação
+✅ Toasts acessíveis
+✅ Documentação técnica completa
+✅ Otimização pronta para produção
 
 👩🏻‍💻 Autora
 
 Ana Paula Santos
+Projeto desenvolvido para disciplina de Programação Web.
 
 📜 Licença
 
-Projeto desenvolvido exclusivamente para fins acadêmicos.
+Projeto acadêmico. Não destinado a uso comercial.
+
